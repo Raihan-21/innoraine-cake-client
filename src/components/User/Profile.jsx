@@ -29,7 +29,7 @@ const Profile = ({ user }) => {
         }}
         validationSchema={schema}
         onSubmit={async (values) => {
-          const res = await fetch(`/profile/${user._id}/update`, {
+          const res = await fetch(`/api/profile/${user._id}/update`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(values),

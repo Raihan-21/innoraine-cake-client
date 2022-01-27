@@ -8,7 +8,7 @@ import { useNavigate, Link } from "react-router-dom";
 
 const Checkout = () => {
   const userid = useSelector((state) => state.auth.userid);
-  const [data, isLoading] = useFetch(`/checkout/${userid}`);
+  const [data, isLoading] = useFetch(`/api/checkout/${userid}`);
   const [minDate, setMinDate] = useState("");
   const [confirmed, setConfirmed] = useState(false);
   const navigate = useNavigate();

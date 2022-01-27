@@ -41,7 +41,7 @@ const Register = () => {
         }}
         validationSchema={schema}
         onSubmit={async (values, action) => {
-          const res = await fetch("/register", {
+          const res = await fetch("/api/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(values),

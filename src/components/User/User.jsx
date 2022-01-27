@@ -9,12 +9,12 @@ import { logout } from "../../redux/reducer";
 
 const User = () => {
   const userid = useSelector((state) => state.auth.userid);
-  const [data, isLoading] = useFetch(`/profile/${userid}`);
+  const [data, isLoading] = useFetch(`/api/profile/${userid}`);
   const [tab, setTab] = useState("profile");
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const logoutRedux = useCallback(async () => {
-    const res = await fetch("/logout");
+    const res = await fetch("/api/logout");
     const data = await res.json();
     dispatch(logout());
     navigate("/");

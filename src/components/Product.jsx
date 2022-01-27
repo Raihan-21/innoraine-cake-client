@@ -3,7 +3,7 @@ import useFetch from "../hooks/useFetch";
 
 const Product = () => {
   const { id } = useParams();
-  const [data, isLoading] = useFetch(`/products${id}`);
+  const [data, isLoading] = useFetch(`/api/products${id}`);
   // useEffect(() => {
   //   const getProduct = async () => {
   //     try {

@@ -12,7 +12,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     const getToken = async () => {
-      const res = await fetch("/auth");
+      const res = await fetch("/api/auth");
       const data = await res.json();
       if (data.error) {
         console.log(data.error);

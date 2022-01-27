@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
 
 const Products = () => {
-  const [data, isLoading] = useFetch("/products");
+  const [data, isLoading] = useFetch("/api/products");
   const [quantity, setQuantity] = useState(1);
   const userid = useSelector((state) => state.auth.userid);
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const Products = () => {
           quantity: Number(quantity),
           price: item.price * Number(quantity),
         };
-        const res = await fetch(`/cart/${userid}`, {
+        const res = await fetch(`/api/cart/${userid}`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ addedItem }),
