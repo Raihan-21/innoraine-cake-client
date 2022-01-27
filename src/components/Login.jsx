@@ -33,11 +33,14 @@ const Login = () => {
         validationSchema={schema}
         onSubmit={async (values, action) => {
           setClicked(true);
-          const res = await fetch("/api/login", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(values),
-          });
+          const res = await fetch(
+            "https://innoraine-cake-revamp.herokuapp.com/api/login",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(values),
+            }
+          );
           const data = await res.json();
           if (data.error) {
             setErrorMsg(data.error);

@@ -9,7 +9,10 @@ const CartItem = ({ item, index, modifyQty, deleteItem }) => {
   }, []);
   return (
     <div className={`item ${isLoading ? "loading" : ""}`}>
-      <img src={`http://localhost:5000/uploads/${item.image}`} alt="cake"></img>
+      <img
+        src={`https://innoraine-cake-revamp.herokuapp.com/uploads/${item.image}`}
+        alt="cake"
+      ></img>
       <div className="main">
         <h2>{item.itemname}</h2>
         <p>{item.price}</p>

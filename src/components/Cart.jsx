@@ -19,11 +19,14 @@ const Cart = () => {
   const navigate = useNavigate();
   const postModify = useCallback(
     async (quantity, price, itemid) => {
-      const res = await fetch(`/api/cart/${userid}/edit`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ quantity, price, itemid }),
-      });
+      const res = await fetch(
+        `https://innoraine-cake-revamp.herokuapp.com/api/cart/${userid}/edit`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ quantity, price, itemid }),
+        }
+      );
       const data = await res.json();
       return data;
     },
@@ -64,11 +67,14 @@ const Cart = () => {
   );
   const deleteItem = useCallback(
     async (itemid, quantity, price) => {
-      const res = await fetch(`/api/cart/${userid}/delete`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ itemid, quantity, price }),
-      });
+      const res = await fetch(
+        `https://innoraine-cake-revamp.herokuapp.com/api/cart/${userid}/delete`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ itemid, quantity, price }),
+        }
+      );
       const data = await res.json();
       if (data.modifiedCount === 0) return;
       setItems(items.filter((item) => item._id !== itemid));
@@ -105,7 +111,9 @@ const Cart = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await fetch(`/api/cart/${userid}`);
+      const res = await fetch(
+        `https://innoraine-cake-revamp.herokuapp.com/api/cart/${userid}`
+      );
       const data = await res.json();
       if (data.cart.userid) {
         setEmptyCart(false);

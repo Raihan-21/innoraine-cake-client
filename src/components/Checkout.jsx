@@ -8,7 +8,9 @@ import { useNavigate, Link } from "react-router-dom";
 
 const Checkout = () => {
   const userid = useSelector((state) => state.auth.userid);
-  const [data, isLoading] = useFetch(`/api/checkout/${userid}`);
+  const [data, isLoading] = useFetch(
+    `https://innoraine-cake-revamp.herokuapp.com/api/checkout/${userid}`
+  );
   const [minDate, setMinDate] = useState("");
   const [confirmed, setConfirmed] = useState(false);
   const navigate = useNavigate();
@@ -112,7 +114,7 @@ const Checkout = () => {
                 {data.items.items.map((item, i) => (
                   <div className="item" key={i}>
                     <img
-                      src={`http://localhost:5000/uploads/${item.image}`}
+                      src={`https://innoraine-cake-revamp.herokuapp.com/uploads/${item.image}`}
                       alt=""
                     />
                     <div className="main">

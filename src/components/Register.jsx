@@ -41,11 +41,14 @@ const Register = () => {
         }}
         validationSchema={schema}
         onSubmit={async (values, action) => {
-          const res = await fetch("/api/register", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(values),
-          });
+          const res = await fetch(
+            "https://innoraine-cake-revamp.herokuapp.com/api/register",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(values),
+            }
+          );
           const data = await res.json();
           if (data.error) {
             if (data.error.code === 11000) {

@@ -12,7 +12,9 @@ const Navbar = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     const getToken = async () => {
-      const res = await fetch("/api/auth");
+      const res = await fetch(
+        "https://innoraine-cake-revamp.herokuapp.com/api/auth"
+      );
       const data = await res.json();
       if (data.error) {
         console.log(data.error);

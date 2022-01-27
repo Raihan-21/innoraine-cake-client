@@ -3,7 +3,9 @@ import useFetch from "../hooks/useFetch";
 
 const Product = () => {
   const { id } = useParams();
-  const [data, isLoading] = useFetch(`/api/products${id}`);
+  const [data, isLoading] = useFetch(
+    `https://innoraine-cake-revamp.herokuapp.com/api/products${id}`
+  );
   // useEffect(() => {
   //   const getProduct = async () => {
   //     try {
@@ -27,7 +29,7 @@ const Product = () => {
           <div className="product">
             <h2>{data.product.itemname}</h2>
             <img
-              src={`http://localhost:5000/uploads/${data.product.image}`}
+              src={`https://innoraine-cake-revamp.herokuapp.com/uploads/${data.product.image}`}
               alt="cake"
               width={100}
             />
