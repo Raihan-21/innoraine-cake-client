@@ -44,7 +44,7 @@ const Products = () => {
         data.products.map((product) => (
           <div className="product" key={product._id}>
             <img
-              src={`http://localhost:5000/uploads/${product.image}`}
+              src={`https://innoraine-cake-revamp.herokuapp.com/uploads/${product.image}`}
               alt="item"
               loading="lazy"
             ></img>
