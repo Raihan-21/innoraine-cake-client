@@ -14,7 +14,7 @@ const Home = () => {
             consectetur. Sed a consectetur est. Nunc nunc ipsum, ultricies
             bibendum pulvinar a, ultricies vel sapien.
           </p>
-          <Link to="/catalogue">Explore</Link>
+          <Link to="/products">Explore</Link>
         </div>
         <img src={cakeImage} alt="cake"></img>
       </div>
