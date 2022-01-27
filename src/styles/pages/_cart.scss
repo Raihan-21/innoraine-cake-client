@@ -1,0 +1,45 @@
+.cart {
+  display: flex;
+  justify-content: space-evenly;
+  .items {
+    width: 60%;
+  }
+  .item {
+    display: flex;
+    margin-bottom: 2rem;
+    img {
+      margin-right: 1rem;
+    }
+  }
+  .loading {
+    color: gray;
+    img {
+      filter: grayscale(100%);
+    }
+  }
+  .quantity-edit {
+    display: flex;
+
+    width: 6rem;
+    align-items: center;
+    justify-content: space-between;
+    button {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background-color: var(--orange);
+    }
+    button:disabled {
+      background-color: #fcd181;
+      cursor: unset;
+    }
+  }
+
+  button {
+    margin-top: 0.5rem;
+  }
+  img {
+    width: 7rem;
+    height: 7rem;
+  }
+}

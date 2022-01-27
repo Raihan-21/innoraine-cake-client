@@ -1,0 +1,39 @@
+.home {
+  .header {
+    display: flex;
+    .text p {
+      margin: 1rem 0;
+    }
+    img {
+      width: 50%;
+      height: auto;
+    }
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .text {
+    width: 50%;
+    overflow: auto;
+  }
+  a {
+    display: block;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    background-color: var(--orange);
+    border-radius: 0.2rem;
+  }
+}
+
+.about {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+  img {
+    width: 40%;
+    height: auto;
+  }
+  .text {
+    width: 40%;
+  }
+}

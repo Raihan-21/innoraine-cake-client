@@ -1,0 +1,39 @@
+.account {
+  .username {
+    text-align: center;
+  }
+  .account-data {
+    display: flex;
+    justify-content: center;
+    .tabs {
+      margin-right: 2rem;
+      border: 1px solid gray;
+      padding: 1rem;
+      border-radius: 1rem;
+      .tab {
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+      }
+      .active {
+        background-color: $secondary-orange;
+      }
+    }
+    .section {
+      border: 1px solid gray;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      h2 {
+        margin-bottom: 1rem;
+      }
+      h4 {
+        margin-bottom: 1rem;
+      }
+      .address {
+        .MuiOutlinedInput-root {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}

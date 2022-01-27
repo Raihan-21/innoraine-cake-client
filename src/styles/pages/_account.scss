@@ -1,0 +1,27 @@
+.login {
+  display: flex;
+  justify-content: center;
+  form {
+    width: 25%;
+    padding: 2rem;
+    border: 1px solid rgb(143, 143, 143);
+    border-radius: 1rem;
+    input {
+      width: 100%;
+    }
+    h1 {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.register {
+  display: flex;
+  justify-content: center;
+  form {
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgb(143, 143, 143);
+    width: 25%;
+  }
+}
